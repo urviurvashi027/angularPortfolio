@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-6 col-lg-6,col-md-6,col-sm-6">
+    <mat-card>
+      <mat-card-title>Font Awesome Icon</mat-card-title>
+      <mat-card-content>
+        <span class="icon" *ngFor="let icons of icon">
+          <i class="{{ icons }}"></i>
+        </span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="col-6 col-lg-6,col-md-6,col-sm-6">
+    <mat-card>
+      <mat-card-title>Ionics Icon</mat-card-title>
+      <mat-card-content>
+        <span class="icon" *ngFor="let icons of iconic">
+          <i class="{{ icons }}"></i>
+        </span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6 col-lg-6,col-md-6,col-sm-6">
+    <mat-card>
+      <mat-card-title>Material Icon</mat-card-title>
+      <mat-card-content>
+        <span class="icon" *ngFor="let icons of matIcon">
+          <mat-icon aria-hidden="false"
+            >{{icons}}</mat-icon
+          >
+        </span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

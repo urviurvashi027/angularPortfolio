@@ -1,0 +1,94 @@
+
+<div class="row">
+  <div class="col-12 col-md-12 col-sm-12 col-lg-12">
+      <mat-card>
+          <mat-card-content>
+            <div class="row">
+              <div class="col-1 col-md-1 col-sm-1 col-lg-1">
+                  <div>
+                      <input id="inpLock" type="checkbox"/>
+                      <label class="btn-lock" for="inpLock">
+                        <svg width="36" height="40" viewBox="0 0 36 40">
+                          <path class="lockb" d="M27 27C27 34.1797 21.1797 40 14 40C6.8203 40 1 34.1797 1 27C1 19.8203 6.8203 14 14 14C21.1797 14 27 19.8203 27 27ZM15.6298 26.5191C16.4544 25.9845 17 25.056 17 24C17 22.3431 15.6569 21 14 21C12.3431 21 11 22.3431 11 24C11 25.056 11.5456 25.9845 12.3702 26.5191L11 32H17L15.6298 26.5191Z"></path>
+                          <path class="lock" d="M6 21V10C6 5.58172 9.58172 2 14 2V2C18.4183 2 22 5.58172 22 10V21"></path>
+                          <path class="bling" d="M29 20L31 22"></path>
+                          <path class="bling" d="M31.5 15H34.5"></path>
+                          <path class="bling" d="M29 10L31 8"></path>
+                        </svg>
+                      </label>
+                  </div>
+              </div>
+              <div class="col-1 col-md-1 col-sm-1 col-lg-1">
+                  <input type="checkbox" id="cbx" style="display:none"/>
+                  <label for="cbx" class="toggle"><span></span></label>    
+                </div>
+                <div class="col-1 col-md-1 col-sm-1 col-lg-1">
+                    <input type="checkbox" id="cb" style="display: none;">
+                    <label for="cb" class="check">
+                      <svg width="18px" height="18px" viewBox="0 0 18 18">
+                        <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                        <polyline points="1 9 7 14 15 4"></polyline>
+                      </svg>
+                    </label>
+                </div>
+                <div class="col-6 col-md-6 col-sm-6 col-lg-6">
+                    <div class="box">
+                        <input class="Switcher__checkbox sr-only" id="io" type="checkbox" checked="checked"/>
+                        <label class="Switcher" for="io">
+                          <div class="Switcher__trigger" data-value="SALE"></div>
+                          <div class="Switcher__trigger" data-value="RENT"></div>
+                        </label>
+                      </div>
+                </div>
+            </div>
+            </mat-card-content>
+      </mat-card>
+  </div>
+</div>
+<div class="row">
+  <div class="col-8 col-md-8 col-sm-8 col-lg-8">
+      <mat-card>
+          <mat-card-content>
+            <mat-card-title>Checkbox Configuration</mat-card-title>
+    <section class="example-section">
+      <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
+      <mat-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+      <label class="example-margin">Align:</label>
+      <mat-radio-group [(ngModel)]="labelPosition">
+        <mat-radio-button class="example-margin" value="after">After</mat-radio-button>
+        <mat-radio-button class="example-margin" value="before">Before</mat-radio-button>
+      </mat-radio-group>
+    </section>
+
+    <section class="example-section">
+      <mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
+    </section>
+  </mat-card-content>
+</mat-card>
+  </div>
+  <div class="col-4 col-md-4 col-sm-4 col-lg-4">
+    <mat-card class="result" style="min-height: 220px;">
+      <mat-card-content>
+        <mat-card-title>Result</mat-card-title>
+    
+        <section class="example-section">
+          <mat-checkbox
+              class="example-margin"
+              [(ngModel)]="checked"
+              [(indeterminate)]="indeterminate"
+              [labelPosition]="labelPosition"
+              [disabled]="disabled">
+            I'm a checkbox
+          </mat-checkbox>
+        </section>
+      </mat-card-content>
+    </mat-card> 
+  </div>
+</div>
+
+
+
+

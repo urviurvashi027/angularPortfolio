@@ -1,0 +1,206 @@
+<mat-card>
+  <mat-card-title>Hero Button</mat-card-title>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-12 col-lg-12,col-md-12,col-sm-12">
+        <button
+          *ngFor="let status of statuses"
+          class="btn"
+          [style.background-image]="getBackgroundImage(status)"
+        >
+          {{ status }}
+        </button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Default Button</mat-card-title>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-12 col-lg-12,col-md-12,col-sm-12">
+        <button
+          *ngFor="let status of statuses"
+          class="btn"
+          [style.background-color]="getBackgroundColor(status)"
+        >
+          {{ status }}
+        </button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Ghost Button</mat-card-title>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-12 col-lg-12,col-md-12,col-sm-12">
+        <button
+          *ngFor="let status of statuses"
+          class="ghost"
+          [style.color]="getColor(status)"
+        >
+          {{ status }}
+        </button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Outline Button</mat-card-title>
+  <mat-card-content>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-12 col-lg-12,col-md-12,col-sm-12">
+          <button
+            *ngFor="let status of statuses"
+            class="outline"
+            [style.color]="getColor(status)"
+            [style.border-color]="getColor(status)"
+          >
+            {{ status }}
+          </button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Icon Button</mat-card-title>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-12 col-lg-12,col-md-12,col-sm-12">
+        <button
+          *ngFor="let icons of icon"
+          class="btn icon"
+          [style.color]="getColor(status)"
+          [style.border-color]="getColor(status)"
+        >
+          <i class="{{ icons.name }}"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-lg-12,col-md-12,col-sm-12">
+        <button
+          *ngFor="let icons of icon"
+          class="btn icon"
+          [style.color]="getColor(status)"
+          [style.border-color]="getColor(status)"
+        >
+          <i class="{{ icons.name }}"></i>{{ icons.text }}
+        </button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Action Button</mat-card-title>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-12 col-lg-12,col-md-12,col-sm-12">
+        <button
+          *ngFor="let actions of action"
+          class="action"
+          [style.color]="getColor(status)"
+          [style.border-color]="getColor(status)"
+        >
+          <i class="{{ actions }}"></i>
+        </button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Button Sizes</mat-card-title>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-12 col-lg-12,col-md-12,col-sm-12">
+        <button
+          *ngFor="let status of sizes"
+          class="btn icon"
+          [style.padding]="getPadding(status)"
+        >
+          {{ status }}
+        </button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Button Shapes</mat-card-title>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-12 col-lg-12,col-md-12,col-sm-12">
+        <button
+          *ngFor="let status of shapes"
+          class="btn icon"
+          [style.border-radius]="getBorder(status)"
+        >
+          {{ status }}
+        </button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Flip Button</mat-card-title>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <a href="#" class="btn btn-sm animated-button victoria-one">Sign up</a>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <a href="#" class="btn btn-sm animated-button victoria-two">Login</a>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <a href="#" class="btn btn-sm animated-button victoria-three"
+          >Register</a
+        >
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <a href="#" class="btn btn-sm animated-button victoria-four"
+          >Learn more</a
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <a href="#" class="btn btn-sm animated-button sandy-one">Sign up</a>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <a href="#" class="btn btn-sm animated-button sandy-two">Login</a>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <a href="#" class="btn btn-sm animated-button sandy-three">Register</a>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <a href="#" class="btn btn-sm animated-button sandy-four">Learn more</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <a href="#" class="btn btn-sm animated-button thar-one">Sign up</a>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <a href="#" class="btn btn-sm animated-button thar-two">Login</a>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <a href="#" class="btn btn-sm animated-button thar-three">Register</a>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <a href="#" class="btn btn-sm animated-button thar-four">Learn more</a>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

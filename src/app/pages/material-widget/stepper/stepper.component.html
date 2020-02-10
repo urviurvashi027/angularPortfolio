@@ -1,0 +1,76 @@
+<div class="row">
+  <div class="col-6 col-lg-6 col-md-6 col-sm-6">
+    <mat-card>
+      <mat-card-title>Vertical Stepper</mat-card-title>
+      <div class="container">
+        <!-- completed -->
+          <div class="step completed">
+            <div class="v-stepper">
+              <div class="circle"></div>
+              <div class="line"></div>
+            </div>
+      
+            <div class="content">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.y text of the printing and typesetting industry.
+            </div>
+        </div>
+        
+        <!-- active -->
+        <div class="step active">
+          <div class="v-stepper">
+            <div class="circle"></div>
+            <div class="line"></div>
+          </div>
+      
+          <div class="content">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </div>
+        </div>
+        
+          <!-- empty -->
+        <div class="step empty">
+            <div class="v-stepper">
+              <div class="circle"></div>
+              <div class="line"></div>
+            </div>
+      
+            <div class="content">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum is simply dummy text of the printing and typesetting
+            </div>
+        </div>
+        
+        <!-- regular -->
+        <div class="step">
+            <div class="v-stepper">
+              <div class="circle"></div>
+              <div class="line"></div>
+            </div>
+      
+            <div class="content">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+        </div>
+        
+      </div>
+    </mat-card>
+  </div>
+  <div class="col-6 col-lg-6 col-md-6 col-sm-6">
+    <mat-vertical-stepper>
+      <ng-template matStepperIcon="none">
+        <mat-icon style="display: none;"></mat-icon>
+      </ng-template>
+      <mat-step *ngFor="let step of Steps; let i= index;" [label]="step.name">
+        <mat-vertical-stepper>
+          <ng-template matStepperIcon="none">
+            <mat-icon></mat-icon>
+          </ng-template>
+          <mat-step *ngFor="let substep of step.subnames; let j = index" label="{{i+1}}.{{j+1}}">
+          </mat-step>
+        </mat-vertical-stepper>
+      </mat-step>
+    </mat-vertical-stepper>
+  </div>
+</div>

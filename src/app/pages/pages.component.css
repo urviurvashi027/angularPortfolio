@@ -1,0 +1,40 @@
+/* {
+    background-color:#edf1f7;
+} */
+.layout-container{
+    min-height: 100vh;
+    background-color: #edf1f7;
+    display: flex;
+    flex: 1;
+    -ms-flex: 1 1 auto;
+    flex-direction: row;
+}
+
+.ng-sidebar {
+    /* background: pink; */
+    width: 13rem;
+    /* background-color: #fff; */
+    box-shadow: 0 0.5rem 1rem 0 rgba(44,51,73,.1);
+    color: #1a2138;
+    font-family: Open Sans,sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    width: 16rem;
+}
+
+.ng-sidebar--left {
+    color: green !important;
+    background-color: white;
+}
+/* .sidebar-default{
+    background: yellow;
+    width: 13rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(44,51,73,.1);
+    color: #1a2138;
+    font-family: Open Sans,sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    width: 16rem;
+} */

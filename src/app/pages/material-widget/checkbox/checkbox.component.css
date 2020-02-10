@@ -1,0 +1,371 @@
+.btn-lock {
+    /* position: absolute;
+    top: calc(50% - 32px);
+    left: calc(50% - 32px); */
+    display: inline-block;
+    background: #ff5b5b;
+    width: 64px;
+    height: 64px;
+    box-sizing: border-box;
+    padding: 12px 0 0 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn-lock svg {
+    fill: none;
+    transform: translate3d(0, 0, 0);
+  }
+  .btn-lock svg .bling {
+    stroke: #fff;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-dasharray: 3;
+    stroke-dashoffset: 15;
+    transition: all 0.3s ease;
+  }
+  .btn-lock svg .lock {
+    stroke: #fff;
+    stroke-width: 4;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-dasharray: 36;
+    transition: all 0.4s ease;
+  }
+  .btn-lock svg .lockb {
+    fill: #fff;
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    transform: rotate(8deg);
+    transform-origin: 14px 20px;
+    transition: all 0.2s ease;
+  }
+  #inpLock {
+    display: none;
+  }
+  #inpLock:checked + label {
+    background: #20cca5;
+  }
+  #inpLock:checked + label svg {
+    opacity: 1;
+  }
+  #inpLock:checked + label svg .bling {
+    animation: bling 0.3s linear forwards;
+    animation-delay: 0.2s;
+  }
+  #inpLock:checked + label svg .lock {
+    stroke-dasharray: 48;
+    animation: locked 0.3s linear forwards;
+  }
+  #inpLock:checked + label svg .lockb {
+    transform: rotate(0);
+    transform-origin: 14px 22px;
+  }
+  @-moz-keyframes bling {
+    50% {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 12;
+    }
+    100% {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 9;
+    }
+  }
+  @-webkit-keyframes bling {
+    50% {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 12;
+    }
+    100% {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 9;
+    }
+  }
+  @-o-keyframes bling {
+    50% {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 12;
+    }
+    100% {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 9;
+    }
+  }
+  @keyframes bling {
+    50% {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 12;
+    }
+    100% {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 9;
+    }
+  }
+  @-moz-keyframes locked {
+    50% {
+      transform: translateY(1px);
+    }
+  }
+  @-webkit-keyframes locked {
+    50% {
+      transform: translateY(1px);
+    }
+  }
+  @-o-keyframes locked {
+    50% {
+      transform: translateY(1px);
+    }
+  }
+  @keyframes locked {
+    50% {
+      transform: translateY(1px);
+    }
+  }
+  .toggle {
+    position: relative;
+    display: block;
+    width: 40px;
+    margin-top: 20px;
+
+    height: 20px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+  }
+  .toggle:before {
+    content: "";
+    position: relative;
+    top: 3px;
+    left: 3px;
+    width: 34px;
+    height: 14px;
+    display: block;
+    background: #9A9999;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+  }
+  .toggle span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(154, 153, 153, 0.5);
+    transition: all 0.2s ease;
+  }
+  .toggle span:before {
+    content: "";
+    position: absolute;
+    display: block;
+    margin: -18px;
+    width: 56px;
+    height: 56px;
+    background: rgba(79, 46, 220, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 1;
+    pointer-events: none;
+  }
+  
+  #cbx:checked + .toggle:before {
+    background: #947ADA;
+  }
+  #cbx:checked + .toggle span {
+    background: #4F2EDC;
+    transform: translateX(20px);
+    transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
+    box-shadow: 0 3px 8px rgba(79, 46, 220, 0.2);
+  }
+  #cbx:checked + .toggle span:before {
+    transform: scale(1);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  
+  .center {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 20px);
+  }
+  .check {
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    margin-top: 20px;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+  }
+  .check:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(34,50,84,0.03);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .check svg {
+    position: relative;
+    z-index: 1;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #c8ccd4;
+    stroke-width: 1.5;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+  }
+  .check svg path {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 0;
+  }
+  .check svg polyline {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 66;
+  }
+  .check:hover:before {
+    opacity: 1;
+  }
+  .check:hover svg {
+    stroke: #4285f4;
+  }
+  #cb:checked + .check svg {
+    stroke: #4285f4;
+  }
+  #cb:checked + .check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+  }
+  #cb:checked + .check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+  }
+  .Switcher {
+    position: relative;
+    display: flex;
+    border-radius: 5em;
+    box-shadow: inset 0 0 0 1px;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-animation: r-n .5s;
+            animation: r-n .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    font-size: 3vmin;
+    will-change: transform;
+  }
+  .Switcher__checkbox:checked + .Switcher {
+    -webkit-animation-name: r-p;
+            animation-name: r-p;
+  }
+  @-webkit-keyframes r-p {
+    50% {
+      -webkit-transform: rotateY(45deg);
+              transform: rotateY(45deg);
+    }
+  }
+  @keyframes r-p {
+    50% {
+      -webkit-transform: rotateY(45deg);
+              transform: rotateY(45deg);
+    }
+  }
+  @-webkit-keyframes r-n {
+    50% {
+      -webkit-transform: rotateY(-45deg);
+              transform: rotateY(-45deg);
+    }
+  }
+  @keyframes r-n {
+    50% {
+      -webkit-transform: rotateY(-45deg);
+              transform: rotateY(-45deg);
+    }
+  }
+  .Switcher::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200%;
+    border-radius: inherit;
+    background-color: #36f;
+    -webkit-transform: translateX(-75%);
+            transform: translateX(-75%);
+    transition: -webkit-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  }
+  .Switcher__checkbox:checked + .Switcher::before {
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+  }
+  
+  .Switcher__trigger {
+    position: relative;
+    z-index: 1;
+    padding: 1em 5em;
+  }
+  .Switcher__trigger::after {
+    content: attr(data-value);
+  }
+  .Switcher__trigger::before {
+    --i: var(--x);
+    content: attr(data-value);
+    position: absolute;
+    color: white;
+    transition: opacity .3s;
+    opacity: calc((var(--i) + 1) / 2);
+    transition-delay: calc(.3s * (var(--i) - 1) / -2);
+  }
+  .Switcher__checkbox:checked + .Switcher .Switcher__trigger::before {
+    --i: calc(var(--x) * -1);
+  }
+  .Switcher__trigger:nth-of-type(1)::before {
+    --x: 1;
+  }
+  .Switcher__trigger:nth-of-type(2)::before {
+    --x: -1;
+  }
+  
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  .box {
+    display: flex;
+    flex: 1;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    -webkit-perspective: 750px;
+            perspective: 750px;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  

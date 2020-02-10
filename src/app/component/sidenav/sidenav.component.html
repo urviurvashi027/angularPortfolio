@@ -1,0 +1,12 @@
+<section style="background-color: white;padding-top: 4.75rem;">
+  <ul class="ul-style pt-3 lside-ul menu-items">
+    <li *ngFor="let menuItem of menuItems" class="cursor-p sideNav-li font12 fontLight menu-item" style="display: block;">
+       <a routerLink="{{menuItem.link}}"  role="button" [attr.aria-expanded]="!isCollapsed" [attr.aria-controls]="menuItem.web_menu_id + 'abc'" (click)="lMenuClk($event,menuItem)">{{ menuItem.web_app_menu }}</a>
+        <ul *ngIf="menuItem.is_pseudo_sub_menu != 1" class="ul-style pt-3 lside-ul menu-items collapse" id="{{menuItem.web_menu_id}}abc" [ngbCollapse]="menuItem.isCollapsed">
+          <li *ngFor="let subMenuItem of menuItem.sub_menu;" class="cursor-p sideNav-li font12 fontLight menu-item">
+              <a routerLink="{{subMenuItem.link}}" >{{ subMenuItem.name }}</a>
+          </li>
+        </ul>
+    </li>
+  </ul>
+</section>

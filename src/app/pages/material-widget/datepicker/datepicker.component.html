@@ -1,0 +1,99 @@
+<mat-card>
+  <mat-card-title>Datepicker</mat-card-title>
+  <mat-card-content>
+  <div class="row">
+    <div class="col-4 col-md-4 col-sm-4 col-lg-4">
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker1" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker touchUi #picker1 startView="year" [startAt]="startDate"></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="col-4 col-md-4 col-sm-4 col-lg-4">
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker2" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker touchUi #picker2></mat-datepicker>
+        </mat-form-field>    
+    </div>
+    <div class="col-4 col-md-4 col-sm-4 col-lg-4">
+      <mat-form-field class="example-full-width">
+        <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker3" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+        <mat-datepicker touchUi #picker3></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+</mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Datepicker</mat-card-title>
+  <mat-card-content>
+  <div class="row">
+    <div class="col-4 col-md-4 col-sm-4 col-lg-4">
+      <mat-form-field class="example-full-width">
+        <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker4" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+        <mat-datepicker touchUi #picker4></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="col-4 col-md-4 col-sm-4 col-lg-4">
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker5" placeholder="Input & change events"
+         (dateInput)="addEvent('input', $event)" (dateChange)="addEvent('change', $event)">
+          <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+           <mat-datepicker #picker5></mat-datepicker>
+      </mat-form-field>  
+      <div class="example-events">
+        <div *ngFor="let e of events">{{e}}</div>
+      </div>
+    </div>
+  </div>
+</mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Datepicker Bootstrap</mat-card-title>
+  <mat-card-content>
+  <div class="row">
+    <!-- <div class="col-4 col-md-4 col-sm-4 col-lg-4">
+      <form class="form-inline">
+        <div class="form-group">
+          <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd"
+                   name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker"
+                   [placement]="placement" [positionTarget]="buttonEl">
+            <div class="input-group-append">
+              <button #buttonEl class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-sm-3">
+          <label for="placement">Placement</label>
+          <select id="placement" class="custom-select form-control" [(ngModel)]="placement">
+            <option value="top">Top</option>
+            <option value="bottom">Bottom</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+          </select>
+        </div>
+      </div>
+    </div> -->
+    
+    <!-- <div class="col-4 col-md-4 col-sm-4 col-lg-4">
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker5" placeholder="Input & change events"
+         (dateInput)="addEvent('input', $event)" (dateChange)="addEvent('change', $event)">
+          <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+           <mat-datepicker #picker5></mat-datepicker>
+      </mat-form-field>  
+      <div class="example-events">
+        <div *ngFor="let e of events">{{e}}</div>
+      </div>
+    </div> -->
+  </div>
+</mat-card-content>
+</mat-card>

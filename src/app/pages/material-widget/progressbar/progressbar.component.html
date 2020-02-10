@@ -1,0 +1,184 @@
+<div class="row">
+  <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+    <mat-card>
+      <mat-card-title>Progress Bar Status</mat-card-title>
+      <div class="container">
+        <div class="progress-container">
+          <div class="progress-value primary">
+            primary
+          </div>
+        </div>
+        <div class="progress-container">
+          <div class="progress-value info">
+            info
+          </div>
+        </div>
+        <div class="progress-container">
+          <div class="progress-value warning">
+            success
+          </div>
+        </div>
+        <div class="progress-container">
+          <div class="progress-value success">
+            warning
+          </div>
+        </div>
+        <div class="progress-container" style="margin-bottom: 2rem;">
+          <div class="progress-value danger">
+            danger
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+    <mat-card>
+      <mat-card-title>Progress Bar Interactive</mat-card-title>
+      <mat-card-content>
+          <div class="container" style="display: flex;align-items: center;">
+            <button class="btn" (click)="progressBarClick('plus')"><i class="fa fa-plus"></i>
+              </button>
+              <div class="progress-container" style="flex: 1;
+              margin: 0 1rem;">
+                <div class="progress-value primary" id="progressValue">
+                  {{width}}%
+                </div>
+              </div>
+              <button class="btn" (click)="progressBarClick('minus')"><i class="fa fa-minus"></i></button>
+            </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+    <mat-card>
+      <mat-card-title>Progress Bar Size</mat-card-title>
+      <mat-card-content>
+          <div class="container">
+              <div class="progress-container" style="height: 1rem;">
+                <div class="progress-value primary" style="height: 1rem;width:20%">
+                    tiny
+                </div>
+              </div>
+              <div class="progress-container" style="height: 1.25rem;">
+                <div class="progress-value primary" style="height: 1.25rem;width:60%">
+                    small
+                </div>
+              </div>
+              <div class="progress-container" style="height: 1.375rem;">
+                <div class="progress-value primary" style="height: 1.375rem;width:50%">
+                    medium
+                </div>
+              </div>
+              <div class="progress-container" style="height: 1.5rem;">
+                <div class="progress-value primary" style="height: 1.5rem;width:80%">
+                    large
+                </div>
+              </div>
+              <div class="progress-container" style="margin-bottom: 2rem;height: 1.75rem;">
+                <div class="progress-value primary" style="height: 1.75rem;width:40%">
+                    giant
+                </div>
+              </div>
+            </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+    <mat-card>
+      <mat-card-title>Progress Bar Custom Text</mat-card-title>
+    <mat-card-content>
+      <div class="container">
+          <input [(ngModel)]="progessText">
+          <div class="progress-container">
+              <div class="progress-value primary">
+                  {{progessText}}
+              </div>
+            </div>
+      </div>
+    </mat-card-content>
+
+    </mat-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+    <mat-card>
+      <mat-card-title>Progress bar configuration</mat-card-title>
+      <mat-card-content>
+        <section class="example-section">
+          <label class="example-margin">Color:</label>
+          <mat-radio-group [(ngModel)]="color">
+            <mat-radio-button class="example-margin" value="primary">
+              Primary
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="accent">
+              Accent
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="warn">
+              Warn
+            </mat-radio-button>
+          </mat-radio-group>
+        </section>
+
+        <section class="example-section">
+          <label class="example-margin">Mode:</label>
+          <mat-radio-group [(ngModel)]="mode">
+            <mat-radio-button class="example-margin" value="determinate">
+              Determinate
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="indeterminate">
+              Indeterminate
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="buffer">
+              Buffer
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="query">
+              Query
+            </mat-radio-button>
+          </mat-radio-group>
+        </section>
+
+        <section
+          class="example-section"
+          *ngIf="mode === 'determinate' || mode === 'buffer'"
+        >
+          <label class="example-margin">Progress:</label>
+          <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+        </section>
+        <section class="example-section" *ngIf="mode === 'buffer'">
+          <label class="example-margin">Buffer:</label>
+          <mat-slider
+            class="example-margin"
+            [(ngModel)]="bufferValue"
+          ></mat-slider>
+        </section>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>Result</mat-card-title>
+      <mat-card-content>
+        <section class="example-section">
+          <mat-progress-bar
+            class="example-margin"
+            [color]="color"
+            [mode]="mode"
+            [value]="value"
+            [bufferValue]="bufferValue"
+          >
+          </mat-progress-bar>
+        </section>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

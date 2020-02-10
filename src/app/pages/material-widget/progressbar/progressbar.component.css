@@ -1,0 +1,50 @@
+.container{
+    padding: 0.5rem 0.9rem 0.2rem 0.9rem;
+}
+.progress-container{
+    background-color: #edf1f7;
+    height: 1.375rem;
+    margin-top: 1rem;
+    border-radius: .25rem;
+}
+
+.progress-value{
+    color: #fff;
+    border-radius: .25rem;
+    height: 1.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Open Sans,sans-serif;
+    transition-duration: .4s;
+    transition-property: width,background-color;
+}
+.btn{
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 0 solid transparent;
+    padding: .75rem 1.25rem;
+    color: #36f;
+}
+.primary{
+    background-color : #36f;
+    width: 30%;
+}
+
+.info{
+    background-color : #0095ff;
+    width: 40%;
+}
+
+.warning{
+    background-color : #00d68f;
+    width: 50%;
+}
+.success{
+    background-color : #fa0;
+    width: 80%;
+}
+.danger{
+    background-color : #ff3d71;
+    width: 90%;
+}

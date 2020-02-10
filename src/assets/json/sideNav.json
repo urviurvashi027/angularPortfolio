@@ -1,0 +1,272 @@
+{
+    "data": [
+      {
+        "web_app_menu": "Dashboard",
+        "web_menu_id": 1,
+        "link":"/pages/dashboard",
+        "icon":"fa fa-yelp",
+        "is_pseudo_sub_menu": 1,
+        "isCollapsed":true
+      },
+      {
+        "web_app_menu": "Material Widget",
+        "web_menu_id": 2,
+        "link":"/pages/materialWidget/button",
+        "icon":"fa fa-windows",
+        "isCollapsed":true,
+        "is_pseudo_sub_menu": 0,
+          "sub_menu": [
+          {
+            "name": "Button",
+            "id": 1,
+            "link":"/pages/materialWidget/button"
+          },
+          {
+            "name": "Icon",
+            "id": 2,
+            "link":"/pages/materialWidget/icon"
+          },
+          {
+            "name": "Card",
+            "id": 3,
+            "link":"/pages/materialWidget/card"
+          },
+          {
+            "name": "Spinner",
+            "id": 4,
+            "link":"/pages/materialWidget/spinner"
+          },
+          {
+            "name": "Checkbox",
+            "id": 5,
+            "link":"/pages/materialWidget/checkbox"
+          },
+          {
+            "name": "Datepicker",
+            "id": 6,
+            "link":"/pages/materialWidget/date"
+          },
+          {
+            "name": "Expansion",
+            "id": 7,
+            "link":"/pages/materialWidget/expansion"
+          },
+          {
+            "name": "Input",
+            "id": 8,
+            "link":"/pages/materialWidget/input"
+          },
+          {
+            "name": "List",
+            "id": 9,
+            "link":"/pages/materialWidget/list"
+          },
+          {
+            "name": "ProgressBar",
+            "id": 10,
+            "link":"/pages/materialWidget/progressbar"
+          },
+          {
+            "name": "Radio",
+            "id": 11,
+            "link":"/pages/materialWidget/radio"
+          },
+          {
+            "name": "Select",
+            "id": 12,
+            "link":"/pages/materialWidget/select"
+          },
+          {
+            "name": "Slider",
+            "id": 13,
+            "link":"/pages/materialWidget/slider"
+          },
+          {
+            "name": "Stepper",
+            "id": 15,
+            "link":"/pages/materialWidget/stepper"
+          },
+          {
+            "name": "Menu",
+            "id": 17,
+            "link":"/pages/materialWidget/menu"
+          }
+        ]
+      },
+      {
+        "web_app_menu": "Table",
+        "web_menu_id": 4,
+        "link":"/pages/table/simpletable",
+        "icon":"fa fa-windows",
+        "isCollapsed":true,
+        "is_pseudo_sub_menu": 0,
+        "sub_menu": [
+          {
+            "name": "Responsive Table",
+            "id": 2,
+            "link":"/pages/table/responsivetable"
+          },
+          {
+            "name": "Responsive Card Table",
+            "id": 3,
+            "link":"/pages/table/responsivecardtable"
+          },
+          {
+            "name": "Filter Table",
+            "id": 4,
+            "link":"/pages/table/tablewithpagination"
+          },
+          {
+            "name": "Smart Table",
+            "id": 5,
+            "link":"/pages/table/smarttable"
+          }
+        ]
+      },
+      {
+        "web_app_menu": "Chart",
+        "web_menu_id": 5,
+        "isCollapsed":true,
+        "icon":"fa fa-windows",
+        "link":"/pages/charts",
+        "is_pseudo_sub_menu": 1
+      },
+      {
+        "web_app_menu": "Map",
+        "web_menu_id": 6,
+        "isCollapsed":true,
+        "icon":"fa fa-windows",
+        "link":"/pages/map",
+        "is_pseudo_sub_menu": 1
+      },
+      {
+        "web_app_menu": "Layout",
+        "web_menu_id": 7,
+        "link":"/pages/layouts/tabs",
+        "isCollapsed":true,
+        "icon":"fa fa-windows",
+        "is_pseudo_sub_menu": 0,
+        "sub_menu": [
+          {
+            "name": "Tabs",
+            "id": 1,
+            "link":"/pages/layouts/tabs"
+          },
+          {
+            "name": "Infinite Scroll",
+            "id": 2,
+            "link":"/pages/layouts/infinitepageload"
+          },
+          {
+            "name": "Window Scroll",
+            "id": 3,
+            "link":"/pages/layouts/window"
+          }
+        ]
+      },
+      {
+        "web_app_menu": "Auth",
+        "web_menu_id": 8,
+        "isCollapsed":true,
+        "icon":"fa fa-windows",
+        "link":"/pages/auth/login",
+        "is_pseudo_sub_menu": 0,
+        "sub_menu": [
+          {
+            "name": "Login",
+            "id": 1,
+            "link":"/pages/auth/login"
+          },
+          {
+            "name": "Forgot Password",
+            "id": 2,
+            "link":"/pages/auth/forgotpage"
+          },
+          {
+            "name": "404",
+            "id": 3,
+            "link":"/pages/auth/notfoundpage"
+          }
+        ]
+      },
+      {
+        "web_app_menu": "Application",
+        "web_menu_id": 9,
+        "link":"/pages/applications/chat",
+        "isCollapsed":true,
+        "icon":"fa fa-windows",
+        "is_pseudo_sub_menu": 0,
+        "sub_menu": [
+          {
+            "name": "Chat",
+            "id": 1,
+            "link":"/pages/applications/chat"
+          },
+          {
+            "name": "Editor",
+            "id": 2,
+            "link":"/pages/applications/editor"
+          },
+          {
+            "name": "Email",
+            "id": 3,
+            "link":"/pages/applications/email"
+          }
+        ]
+      },
+      {
+        "web_app_menu": "Modal",
+        "web_menu_id": 10,
+        "link":"/pages/modaloverlay/dialog",
+        "isCollapsed":true,
+        "icon":"fa fa-windows",
+        "is_pseudo_sub_menu": 0,
+        "sub_menu": [
+          {
+            "name": "Modal",
+            "id": 1,
+            "link":"/pages/modaloverlay/dialog"
+          },
+          {
+            "name": "Toaster",
+            "id": 2,
+            "link":"/pages/modaloverlay/toaster"
+          },
+          {
+            "name": "Pop Over",
+            "id": 3,
+            "link":"/pages/modaloverlay/popover"
+          },
+          {
+            "name": "Tool Tip",
+            "id": 4,
+            "link":"/pages/modaloverlay/tooltip"
+          }
+        ]
+      },
+      {
+        "web_app_menu": "PlayTime",
+        "web_menu_id": 11,
+        "isCollapsed":true,
+        "icon":"fa fa-windows",
+        "link":"/pages/playTime",
+        "is_pseudo_sub_menu": 1
+      },
+      {
+        "web_app_menu": "Projects",
+        "web_menu_id": 12,
+        "isCollapsed":true,
+        "icon":"fa fa-windows",
+        "link":"/pages/projects",
+        "is_pseudo_sub_menu": 1
+      },
+      {
+        "web_app_menu": "Know Me",
+        "web_menu_id": 13,
+        "isCollapsed":true,
+        "icon":"fa fa-windows",
+        "link":"/pages/knowMe",
+        "is_pseudo_sub_menu": 1
+      }
+    ]
+  }

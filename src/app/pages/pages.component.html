@@ -1,0 +1,20 @@
+
+
+  <div class="layout-container">
+  <ng-sidebar-container style="height: 100vh;">
+    <ng-sidebar [(opened)]="_opened" position="left" class="sidebar-default" mode="push">
+      <app-sidenav></app-sidenav>
+    </ng-sidebar>
+
+    <div ng-sidebar-content style="padding-top: 2.75rem;">
+        <section class="mx-4 mt-5 pt-4">
+            <router-outlet></router-outlet>
+        </section>
+    </div>
+    <app-footer></app-footer>
+  </ng-sidebar-container>
+</div>
+
+
+
+

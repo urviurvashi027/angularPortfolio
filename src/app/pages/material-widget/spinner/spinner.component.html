@@ -1,0 +1,158 @@
+<div class="row">
+  <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+    <mat-card>
+      <mat-card-title>Basic Buttons Loaders</mat-card-title>
+      <mat-card-content>
+        <div class="button-row">
+          <button class="btn primaryBackgroundColor">
+            Primary
+            <mat-icon style="padding: 8px 1px 0px 10px;"
+              ><mat-spinner color="white" diameter="20"> </mat-spinner
+            ></mat-icon>
+          </button>
+          <button disabled class="btn primaryBackgroundColor">
+            <mat-icon style="padding: 8px 8px 1px 0px;"
+              ><mat-spinner diameter="20"> </mat-spinner></mat-icon
+            >Disabled
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+    <mat-card>
+      <mat-card-title>Raised Buttons Loaders</mat-card-title>
+      <mat-card-content>
+        <div class="button-row">
+          <mat-spinner-button
+            [options]="spinnerButtonOptions"
+            (btnClick)="someFunc()"
+          >
+          </mat-spinner-button>
+          <mat-bar-button [options]="barButtonOptions" (btnClick)="someFunc2()">
+          </mat-bar-button>
+          <button class="btn accentBackgroundColor" color="accent">
+            Accent
+            <mat-icon>favorite</mat-icon>
+            <mat-icon style="padding: 8px 1px 0px 10px;"
+              ><mat-spinner color="primary" diameter="20"> </mat-spinner
+            ></mat-icon>
+          </button>
+          <button class="btn warnBackgroundColor" color="warn">
+            Warn
+            <mat-icon style="padding: 8px 1px 0px 10px;"
+              ><mat-spinner color="accent" diameter="20"> </mat-spinner
+            ></mat-icon>
+          </button>
+          <button class="btn disabledBackgroundColor" disabled>
+            Disabled
+            <mat-icon style="padding: 8px 1px 0px 10px;"
+              ><mat-spinner color="warn" diameter="20"> </mat-spinner
+            ></mat-icon>
+          </button>
+          <a routerLink=".">
+            <mat-icon style="padding:10px 10px 1px 3px;"
+              ><mat-spinner diameter="20"> </mat-spinner></mat-icon
+            >Link
+          </a>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+    <mat-card>
+      <mat-card-title>Icon Buttons Loaders</mat-card-title>
+      <mat-card-content>
+        <div class="button-row">
+          <button class="primaryBackgroundColor icon-button">
+            <mat-icon aria-label="Example icon-button with a heart icon"
+              >home</mat-icon
+            >
+          </button>
+          <button
+            class="primaryBackgroundColor icon-button"
+            disabled
+            color="primary"
+          >
+            <mat-icon
+              ><mat-spinner color="primary" diameter="20"> </mat-spinner
+            ></mat-icon>
+          </button>
+          <button class="primaryBackgroundColor icon-button" color="accent">
+            <mat-icon aria-label="Example icon-button with a heart icon"
+              >close</mat-icon
+            >
+          </button>
+          <mat-spinner-button
+            [options]="fabSpinnerButtonOptions"
+            (btnClick)="someFunc3()"
+          >
+          </mat-spinner-button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<div class="row">
+  <div class="col-8 col-lg-8,col-md-8,col-sm-8">
+    <mat-card>
+      <mat-card-title>Progress spinner configuration</mat-card-title>
+      <mat-card-content>
+        <section class="example-section">
+          <label class="example-margin">Color:</label>
+          <mat-radio-group [(ngModel)]="color">
+            <mat-radio-button class="example-margin" value="primary">
+              Primary
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="accent">
+              Accent
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="warn">
+              Warn
+            </mat-radio-button>
+          </mat-radio-group>
+        </section>
+
+        <section class="example-section">
+          <label class="example-margin">Mode:</label>
+          <mat-radio-group [(ngModel)]="mode">
+            <mat-radio-button class="example-margin" value="determinate">
+              Determinate
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="indeterminate">
+              Indeterminate
+            </mat-radio-button>
+          </mat-radio-group>
+        </section>
+
+        <section>
+          <input type="text" class="input" [(ngModel)]="strokeWidth" />
+        </section>
+
+        <section class="example-section" *ngIf="mode === 'determinate'">
+          <label class="example-margin">Progress:</label>
+          <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+        </section>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-4 col-lg-4,col-md-4,col-sm-4">
+    <mat-card>
+      <mat-card-title>Result</mat-card-title>
+      <mat-card-content>
+        <mat-progress-spinner
+          class="example-margin"
+          [color]="color"
+          [mode]="mode"
+          [value]="value"
+          [strokeWidth]="strokeWidth"
+        >
+        </mat-progress-spinner>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

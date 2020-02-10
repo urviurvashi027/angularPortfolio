@@ -1,0 +1,104 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body{
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+.cursor-p {
+    cursor: pointer;
+  }
+
+  .pos-abs {
+    position: absolute;
+  }
+  .ng-sidebar {
+    /* background: pink; */
+    width: 13rem;
+    /* background-color: #fff; */
+    box-shadow: 0 0.5rem 1rem 0 rgba(44,51,73,.1);
+    color: #1a2138;
+    font-family: Open Sans,sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    width: 16rem;
+}
+
+.ng-sidebar--left {
+    color: green !important;
+    background-color: white;
+}
+.fixed{
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1040
+}
+.scrollbar{
+	margin-left: 30px;
+	float: left;
+	height: 300px;
+	width: 65px;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+
+.scrollbar{
+      overflow-y: auto; 
+    overflow-x: hidden;
+     flex: 1;
+     padding: 1.25rem;
+     position: relative;
+}
+
+.scroller-container{
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: auto;
+  height: 100vh;
+  display: block;
+}
+
+.mat-card{
+  box-shadow: 0 0.5rem 1rem 0 rgba(44,51,73,.1) !important;
+  border-radius: .25rem !important;
+  padding: 0px !important; 
+  margin-bottom: 1.875rem !important;  
+}
+
+.mat-card-title{
+  padding: 20px 20px 20px 20px !important;
+  border-bottom: 1px solid #edf1f7 !important;
+  font-size: 1.1rem !important;
+}
+
+.mat-card-content{
+  padding: 20px 20px 20px 20px !important;
+}
+
+.mat-card-content>:first-child, .mat-card>:first-child {
+  margin-top: 0 !important;
+}
+.accentBackgroundColor{
+  background-color: #e580ff;
+}
+.warnBackgroundColor{
+  background-color: #ffa64d;
+}
+.primaryBackgroundColor{
+  background-color: #36f;
+}
+.disabledBackgroundColor{
+  background-color: #c2c2d6;
+}
+
