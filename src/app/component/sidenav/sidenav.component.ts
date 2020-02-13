@@ -15,6 +15,8 @@ export class SidenavComponent implements OnInit {
   public selectedMenuCls: any;
   public subMenuItem : any;
   public isCollapsed: boolean;
+  public clickedMenuItem:any;
+  public expand
 
   constructor(private _ajaxService:AjaxServiceProvider,private _dataService:DataServiceProvider) { 
     this.isCollapsed = false;
@@ -37,7 +39,16 @@ export class SidenavComponent implements OnInit {
     this.selectedMenuCls = i;
     i.isCollapsed = ! i.isCollapsed;
     this.isCollapsed = !this.isCollapsed;
-    console.log(i);
+    this.clickedMenuItem = i.web_menu_id;
+    var x = document.getElementById(i.web_menu_id+"abc1");
+    if(i.isCollapsed){
+      x.className = "fa fa-plus";
+    }
+    else{
+      x.className = "fa fa-minus"
+    }
+   
+    console.log(i,"Menu clicked");
   }
 
   lSubMenuClk(ev,i){

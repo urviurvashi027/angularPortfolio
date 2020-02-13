@@ -124,6 +124,22 @@
         ]
       },
       {
+        "web_app_menu": "Chart",
+        "web_menu_id": 5,
+        "isCollapsed":true,
+        "icon":"fa fa-windows",
+        "link":"/pages/charts",
+        "is_pseudo_sub_menu": 1
+      },
+      {
+        "web_app_menu": "Map",
+        "web_menu_id": 6,
+        "isCollapsed":true,
+        "icon":"fa fa-windows",
+        "link":"/pages/map",
+        "is_pseudo_sub_menu": 1
+      },
+      {
         "web_app_menu": "Layout",
         "web_menu_id": 7,
         "link":"/pages/layouts/tabs",
@@ -145,6 +161,31 @@
             "name": "Window Scroll",
             "id": 3,
             "link":"/pages/layouts/window"
+          }
+        ]
+      },
+      {
+        "web_app_menu": "Auth",
+        "web_menu_id": 8,
+        "isCollapsed":true,
+        "icon":"fa fa-windows",
+        "link":"/pages/auth/login",
+        "is_pseudo_sub_menu": 0,
+        "sub_menu": [
+          {
+            "name": "Login",
+            "id": 1,
+            "link":"/pages/auth/login"
+          },
+          {
+            "name": "Forgot Password",
+            "id": 2,
+            "link":"/pages/auth/forgotpage"
+          },
+          {
+            "name": "404",
+            "id": 3,
+            "link":"/pages/auth/notfoundpage"
           }
         ]
       },
@@ -202,6 +243,14 @@
             "link":"/pages/modaloverlay/tooltip"
           }
         ]
+      },
+      {
+        "web_app_menu": "PlayTime",
+        "web_menu_id": 11,
+        "isCollapsed":true,
+        "icon":"fa fa-windows",
+        "link":"/pages/playTime",
+        "is_pseudo_sub_menu": 1
       },
       {
         "web_app_menu": "Projects",

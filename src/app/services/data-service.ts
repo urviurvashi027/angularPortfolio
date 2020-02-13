@@ -12,6 +12,9 @@ export class DataServiceProvider {
   private tableData = new BehaviorSubject([]);
 	tableDataObs = this.tableData.asObservable();
 
+	private toggleMenuVar = new BehaviorSubject([]);
+	toggleMenuObs = this.toggleMenuVar.asObservable();
+
 
   // Dashboard Table
 	languageDatasItms(languageDatasItms) {
@@ -27,6 +30,16 @@ export class DataServiceProvider {
 	}
 	tableDataItmsChanges() {
 		return this.tableDataItms;
+	}
+
+	//toggle Menu
+
+	toggleMenu(flag) {
+		console.log(flag)
+		this.toggleMenuVar.next(flag);
+	}
+	toggleMenuChanges() {
+		return this.toggleMenu;
 	}
 
 
